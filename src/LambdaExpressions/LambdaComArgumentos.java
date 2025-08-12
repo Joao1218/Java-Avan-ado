@@ -37,10 +37,15 @@ public class LambdaComArgumentos {
         listaProd.add(new Produto("TV",1.000));
         listaProd.add(new Produto("Celular",3.000));
         listaProd.add(new Produto("Tablet",2.500));
-        listaProd.add(new Produto("Cpmputador",8.200));
+        listaProd.add(new Produto("Computador",8.200));
         listaProd.add(new Produto("Monitor",1.100));
 
         //Usando lambda expression pra listar os produtos, passamos o parametro o P pra conseguirmos ter acesso ao nome e preço
+        listaProd.forEach((p) -> System.out.println("Nome: "+p.getNome()+", preço: "+p.getPreco()));
+
+        //Usando lambda pra fazer a ordenação dos objetos
+        listaProd.sort((p1,p2) -> p1.getPreco().compareTo(p2.getPreco()));
+
         listaProd.forEach((p) -> System.out.println("Nome: "+p.getNome()+", preço: "+p.getPreco()));
 
     }
