@@ -1,3 +1,5 @@
+package SwitchExpression;
+
 import java.util.Scanner;
 
 public class SwitchExpression {
